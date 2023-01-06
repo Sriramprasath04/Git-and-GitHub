@@ -1,0 +1,20 @@
+Git Basic Cmds
+
+How to config?
+
+git --global user.name "Sriramprasath"
+git --global user.email "Sriramprasath.2002@srit.org"
+
+How to create a Project File using Cmd in Bash?
+
+cd ---> Move Pannurathuku
+mkdir ---> Folder Create Pannurathuku
+touch file_name.extension ---> to create a File (Article.txt)
+
+How to make our Project Folder into a git Repo?
+
+git init ---> Used to initaillze a Empty Git Repository
+
+Status of the Repo?
+
+git status ---> current Status of the repository
