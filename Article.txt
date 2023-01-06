@@ -1,20 +1,42 @@
 Git Basic Cmds
 
-How to config?
+
+1)How to config?
 
 git --global user.name "Sriramprasath"
 git --global user.email "Sriramprasath.2002@srit.org"
+------------------------------------------------------------
 
-How to create a Project File using Cmd in Bash?
+2)How to create a Project File using Cmd in Bash?
 
 cd ---> Move Pannurathuku
 mkdir ---> Folder Create Pannurathuku
 touch file_name.extension ---> to create a File (Article.txt)
+--------------------------------------------------------------
 
-How to make our Project Folder into a git Repo?
+3)How to make our Project Folder into a git Repo?
 
 git init ---> Used to initaillze a Empty Git Repository
+--------------------------------------------------------------
 
-Status of the Repo?
+4)Status of the Repo?
 
 git status ---> current Status of the repository
+--------------------------------------------------------------
+
+5)How to view the History/log of the Commits done?
+
+git log ---> Log History of Commits done before
+--------------------------------------------------------------
+
+6)Adding our changes to Staging area
+
+git add file_name.extension --->Saving our changes to Staging area
+---------------------------------------------------------------------
+
+7)Commiting the information to Master
+
+git commit --->Saving the changes we have made to the Master
+---------------------------------------------------------------
+
+8)
