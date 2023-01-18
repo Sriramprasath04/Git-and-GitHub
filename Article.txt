@@ -51,7 +51,7 @@ git status ---> current Status of the repository
 
 5)How to view the History/log of the Commits done?
 
-git log ---> Log History of Commits done before
+git log ---> Log History of Commits done before (git log --oneline  --> to view history in a line)
 --------------------------------------------------------------
 
 6)Adding our changes to Staging area
@@ -61,7 +61,7 @@ git add file_name.extension --->Saving our changes to Staging area (git add .  -
 
 7)Commiting the information to Master
 
-git commit --->Saving the changes we have made to the Master
+git commit -m 'message' --->Saving the changes we have made to the Master
 ---------------------------------------------------------------
 Three areas of Git
 
@@ -127,6 +127,43 @@ GitHub Push and Pull operations between local and remote
 	-> git pull origin (To save the remote objects to local)
 
 
+========================================================================================================
+we can execute multiple cmds in a single line with the help of '|'
+	example:
+		$ touch f3 | git add . | git commit -m 'multiple_cmds_in_a_line'
+========================================================================================================
 we don't need to memorize each and every cmds git helps us
 	> git help
 	> git help cmd (where cmd referes to the cmd which you have doubt about [eg. git help remote])
+========================================================================================================
+Reference :
+	> Book --> https://git-scm.com/book/en/v2
+	> Pratice Website --> https://learngitbranching.js.org
+	> Blog to know more about commit tree --> https://medium.com/girl-writes-code/git-is-a-directed-acyclic-graph-and-what-the-heck-does-that-mean-b6c8dec65059
+
+
+
+Git Branching:
+	When we initialise a new repo/Addding git to existing project using "git init" cmd we can see a " (master) " which
+has been added ,which is nothing but the default Branch provided by git hosting servecies.
+
+1) How to create a new branch for our repo?
+
+git branch branch_name ---> the branch name can be any(relevant & user specified) 
+---------------------------------------------------------------------------------------------------------
+
+2) How to check what are the avalible in our repo?
+
+git branch ---> it lists the branches avaliable in the repo
+
+note : Here you can see the main/master branch has different color with a * symbol 
+       which denotes it was the present directory in which we are commiting.
+---------------------------------------------------------------------------------------------------------
+
+3) How to switch to other branch from present branch?
+
+> git checkout branch_name ---> to switch branch
+> we can do 1 & 3 in a single cmd => git checkout -b branch_name 
+
+note: HEAD points the tip of the tree
+--------------------------------------------------------------------------------------------------------
