@@ -1,3 +1,28 @@
+What is Git? GitHub?
+How to Install Git?
+
+
+Cmds in Bash? (Git cmds vs Git Graphhical clients)
+	> We can access a raw power 
+	> Early access
+	> Platform independent
+
+   Bash :
+
+
+ Directory navigation, file creation, ...
+
+	git --version ---> to see the version of Git installed in PC
+	pwd (Present working directory) ---> Shows the current location and its path
+	/ (Root directory)
+	cd (Change directory) ---> Move Pannurathuku ('tab' -> to auto complete)
+	ls (list) ---> Shows the lsit of folder in the present directory 
+	mkdir folder_name (Make Directory) ---> Folder Create Pannurathuku
+	rmdir folder_name (Remove Directory) ---> Empty Folder Delete Pannurathuku
+	rm -r folder_name (-r -> recursive) ---> Folder Delete Pannurathuku
+	.. ---> parent folder
+	touch file_name.extension ---> to create a File (Article.txt)
+
 Git Basic Cmds
 
 
@@ -7,10 +32,10 @@ git --global user.name "Sriramprasath"
 git --global user.email "Sriramprasath.2002@srit.org"
 ------------------------------------------------------------
 
-2)How to create a Project File using Cmd in Bash?
+2)How to create a Project Folder & File using Cmd in Bash?
 
 cd ---> Move Pannurathuku
-mkdir ---> Folder Create Pannurathuku
+mkdir folder_name ---> Folder Create Pannurathuku
 touch file_name.extension ---> to create a File (Article.txt)
 --------------------------------------------------------------
 
@@ -31,12 +56,77 @@ git log ---> Log History of Commits done before
 
 6)Adding our changes to Staging area
 
-git add file_name.extension --->Saving our changes to Staging area
+git add file_name.extension --->Saving our changes to Staging area (git add .  --> to add all files)
 ---------------------------------------------------------------------
 
 7)Commiting the information to Master
 
 git commit --->Saving the changes we have made to the Master
 ---------------------------------------------------------------
+Three areas of Git
 
-8)
+	-> Working Directory
+	-> Staging Area
+	-> Repository
+
+		Repository:
+			> Local
+			> Remote 
+
+
+Three Ways to Git
+
+	-> addding git to New Project
+	-> addding git to existing project
+	-> cloning someone else project
+
+
+	Addding git to New Project :
+
+		Step 1: One the New Project -> Right click -> Open "Git Bash here " (This make the Git Bash to open with the current location)
+		Step 2: Cmd "git init" (To make the current Folder as working directory )
+	
+	Addding git to existing project :
+		Step 1: One the New Project -> Right click -> Open "Git Bash here "
+		Step 2: Cmd "git init" (To make the current Folder as working directory )
+		Step 3: Cmd "git status" (It shows all the files in the existing project ,we have to add all the files to it)	
+		Step 4: Cmd "git add ." (To add all the folders to git)
+		Step 5: Cmd "git commit -m "Type the msg" (To commit)
+
+	Cloning someone else project :
+		Step 1: Go to GitHub
+		Step 2: Search for the required Github repo 
+		Step 3: Click "Code"( to downgload)
+		Step 4: Then cpy the address(https mosly)
+		Step 5: Move to the destination folder where you want to clone it
+		Step 6: Right click,then open "Git Bash here " 
+		Step 7: Cmd "git clone 'paste_the_URL",then press ENTER
+
+
+
+---------------------------------------------------------------
+GitHub -> Push (To save the local files to remote) -> Pull (To save the remote files to local)
+---------------------------------------------------------------
+
+. The things that we all done before using git is tracked and stored in the local repository only.
+. There are lots of service-providers avaliable for creating Remote Repository of git.
+. Where Github is one of the most popular service-provider of git.
+
+> Create a GitHub account
+> In header bar,at the right corner you can find a '+' icon click it -> New repository -> Give repository name -> Create repository
+
+There you can find some instructions on creating a new repo on cmd, push an existing repo from cmd,import code from another repo
+
+GitHub Push and Pull operations between local and remote
+
+	-> Open 'Git bash'
+	-> git remote add url_name URL (Note: url_name can be any i.e,user defined or default/most-popular 'origin') (The URL is stored in the url_name)
+	-> git branch -M main (This is line isto rename the existing branch named master into main) (.'. optional)
+	-> git push -u origin main (-u = upstream stting) (This line says, to push the main branch into the URL which is stored in url_name i.e, origin )
+
+	-> git pull origin (To save the remote objects to local)
+
+
+we don't need to memorize each and every cmds git helps us
+	> git help
+	> git help cmd (where cmd referes to the cmd which you have doubt about [eg. git help remote])
