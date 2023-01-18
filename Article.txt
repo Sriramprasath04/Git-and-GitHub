@@ -121,7 +121,7 @@ GitHub Push and Pull operations between local and remote
 
 	-> Open 'Git bash'
 	-> git remote add url_name URL (Note: url_name can be any i.e,user defined or default/most-popular 'origin') (The URL is stored in the url_name)
-	-> git branch -M main (This is line isto rename the existing branch named master into main) (.'. optional)
+	-> git branch -M main (This is line is to rename the existing branch named master into main) (.'. optional)
 	-> git push -u origin main (-u = upstream stting) (This line says, to push the main branch into the URL which is stored in url_name i.e, origin )
 
 	-> git pull origin (To save the remote objects to local)
