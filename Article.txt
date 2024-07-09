@@ -1,4 +1,7 @@
 What is Git? GitHub?
+	Git: It is a distributes version control solftware that we use to track our code
+	GitHub: It is one of the famous Remote Repository provider owned by Microsoft
+
 How to Install Git?
 
 
@@ -7,70 +10,21 @@ Cmds in Bash? (Git cmds vs Git Graphhical clients)
 	> Early access
 	> Platform independent
 
-   Bash :
-
 
  Directory navigation, file creation, ...
 
-	git --version ---> to see the version of Git installed in PC
+	git --version  --------------------> to see the version of Git installed in PC
 	pwd (Present working directory) ---> Shows the current location and its path
-	/ (Root directory)
-	cd (Change directory) ---> Move Pannurathuku ('tab' -> to auto complete)
-	ls (list) ---> Shows the lsit of folder in the present directory 
-	mkdir folder_name (Make Directory) ---> Folder Create Pannurathuku
-	rmdir folder_name (Remove Directory) ---> Empty Folder Delete Pannurathuku
-	rm -r folder_name (-r -> recursive) ---> Folder Delete Pannurathuku
-	.. ---> parent folder
-	touch file_name.extension ---> to create a File (Article.txt)
+	cd (Change directory) -------------> used to Move between directory ('tab' -> to auto complete)
+	cd .. -----------------------------> used to move to parent folder
+	cd / ------------------------------> (Root directory)
+	ls (list) -------------------------> Shows the lsit of folder in the present directory 
+	mkdir folder_name -----------------> used to Create folder  
+	rmdir folder_name -----------------> used to Delete Empty Folder (we can't delete folders containing files in it) 
+	rm -r folder_name -----------------> used to Delete Folder
+	touch file_name.extension ---------> to create a File (Article.txt)
 
-Git Basic Cmds
-
-
-1)How to config?
-
-git --global user.name "Sriramprasath"
-git --global user.email "Sriramprasath.2002@srit.org"
-------------------------------------------------------------
-
-2)How to create a Project Folder & File using Cmd in Bash?
-
-cd ---> Move Pannurathuku
-mkdir folder_name ---> Folder Create Pannurathuku
-touch file_name.extension ---> to create a File (Article.txt)
---------------------------------------------------------------
-
-3)How to make our Project Folder into a git Repo?
-
-git init ---> Used to initaillze a Empty Git Repository
---------------------------------------------------------------
-
-4)Status of the Repo?
-
-git status ---> current Status of the repository
---------------------------------------------------------------
-
-5)How to view the History/log of the Commits done?
-
-git log ---> Log History of Commits done before (git log --oneline  --> to view history in a line)
---------------------------------------------------------------
-
-6)Adding our changes to Staging area
-
-git add file_name.extension --->Saving our changes to Staging area (git add .  --> to add all files)
----------------------------------------------------------------------
-
-7)Commiting the information to Master
-
-git commit -m 'message' --->Saving the changes we have made to the Master
----------------------------------------------------------------
-
-8)Commiting the information to Master without Staging it
-
-git commit -a -m 'message'
----------------------------------------------------------------
-
-Three areas of Git
-
+There are 3 areas of Git they are
 	-> Working Directory
 	-> Staging Area
 	-> Repository
@@ -80,35 +34,101 @@ Three areas of Git
 			> Remote 
 
 
+Git Basic Cmds
+==============
+
+1)How to config?
+
+	git --global user.name "Sriramprasath"
+	git --global user.email "Sriramprasath.2002@srit.org"
+------------------------------------------------------------
+
+2)How to create a Project Folder & File using Cmd in Bash?
+
+	mkdir folder_name ---> Create Folder 
+	touch file_name.extension ---> to create a File (Article.txt)
+--------------------------------------------------------------
+
+3)How to make our Project Folder into a git Repo?
+
+	git init ---> Used to initaillze a Empty Git Repository
+--------------------------------------------------------------
+
+4)Status of the Repo?
+
+	git status ---> to know the current Status of the repository
+--------------------------------------------------------------
+
+5)How to view the History/log of the Commits done?
+
+	git log ---> shows the Log History of Commits done before 
+--------------------------------------------------------------
+
+6)Adding our changes to Staging area
+
+	git add file_name.extension ---> add our changes of the file to Staging area 
+	git add .  --> to add all files to Staging area
+---------------------------------------------------------------------
+
+7)Commiting the information to Master
+
+	git commit -m 'message' ---> Saving the changes we have made to the Master in our local repository
+---------------------------------------------------------------
+
+8)Commiting the information to Master without Staging it
+
+	git commit -a -m 'message'  ---> Saving the changes we have made to the Master in our local repository directly without Staging it
+---------------------------------------------------------------
+
+
 Three Ways to Git
 
 	-> addding git to New Project
 	-> addding git to existing project
-	-> cloning someone else project
+	-> cloning a project
 
 
 	Addding git to New Project :
-
-		Step 1: One the New Project -> Right click -> Open "Git Bash here " (This make the Git Bash to open with the current location)
+		Step 1: Open the folder with cmd 
 		Step 2: Cmd "git init" (To make the current Folder as working directory )
 	
 	Addding git to existing project :
-		Step 1: One the New Project -> Right click -> Open "Git Bash here "
+		Step 1: Open the folder with cmd
 		Step 2: Cmd "git init" (To make the current Folder as working directory )
 		Step 3: Cmd "git status" (It shows all the files in the existing project ,we have to add all the files to it)	
 		Step 4: Cmd "git add ." (To add all the folders to git)
 		Step 5: Cmd "git commit -m "Type the msg" (To commit)
 
 	Cloning someone else project :
+		There are 2 types of cloning can be done with ssh and with https
+			if we use 
+				https -> need to login each time while pushing it to remote repo (Only accept our request if we have access to it from the owner of the repo)
+				ssh ---> no need of repeted login for pushing it to remote repo 
+
+	with https:
 		Step 1: Go to GitHub
 		Step 2: Search for the required Github repo 
-		Step 3: Click "Code"( to downgload)
+		Step 3: Click "Code"(to downgload)
 		Step 4: Then cpy the address(https mosly)
 		Step 5: Move to the destination folder where you want to clone it
-		Step 6: Right click,then open "Git Bash here " 
+		Step 6: Right click,then open "Git Bash here " / open the folder with cmd
 		Step 7: Cmd "git clone 'paste_the_URL",then press ENTER
 
+	with ssh:
+		for ssh we need to generate key 1st and add it to our github
 
+		sshkey generation:
+			sh-keygen -o (then press Enter untill process finish)
+		then cpy the ssh key which is present in the .pub file that is generated (it is shown in the cmd after generation)
+		go to your github -> settings -> SSH and GPG keys
+		click on New SSH key -> give a title and paste the generated key and save it
+		Go to GitHub   
+		Step 2: Search for the required Github repo 
+		Step 3: Click "Code"(to downgload)
+		Step 4: Then cpy the address(ssh)
+		Step 5: Move to the destination folder where you want to clone it
+		Step 6: Right click,then open "Git Bash here " / open the folder with cmd
+		Step 7: Cmd "git clone 'paste_the_URL",then press ENTER
 
 ---------------------------------------------------------------
 GitHub -> Push (To save the local files to remote) -> Pull (To save the remote files to local)
