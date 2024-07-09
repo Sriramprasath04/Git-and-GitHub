@@ -63,6 +63,12 @@ git add file_name.extension --->Saving our changes to Staging area (git add .  -
 
 git commit -m 'message' --->Saving the changes we have made to the Master
 ---------------------------------------------------------------
+
+8)Commiting the information to Master without Staging it
+
+git commit -a -m 'message'
+---------------------------------------------------------------
+
 Three areas of Git
 
 	-> Working Directory
