@@ -117,18 +117,18 @@ Three Ways to Git
 	with ssh:
 		for ssh we need to generate key 1st and add it to our github
 
-		sshkey generation:
-			sh-keygen -o (then press Enter untill process finish)
-		then cpy the ssh key which is present in the .pub file that is generated (it is shown in the cmd after generation)
-		go to your github -> settings -> SSH and GPG keys
-		click on New SSH key -> give a title and paste the generated key and save it
-		Go to GitHub   
-		Step 2: Search for the required Github repo 
-		Step 3: Click "Code"(to downgload)
-		Step 4: Then cpy the address(ssh)
-		Step 5: Move to the destination folder where you want to clone it
-		Step 6: Right click,then open "Git Bash here " / open the folder with cmd
-		Step 7: Cmd "git clone 'paste_the_URL",then press ENTER
+		Step 1 : sshkey generation:
+					Cmd	sh-keygen -o (then press Enter untill process finish)
+		Step 2 : then cpy the ssh key which is present in the .pub file that is generated (it is shown in the cmd after generation)
+		Step 3 : go to your github -> settings -> SSH and GPG keys
+		Step 4 : click on New SSH key -> give a title and paste the generated key and save it
+		Step 5 : Go to GitHub   
+		Step 6 : Search for the required Github repo 
+		Step 7 : Click "Code"(to downgload)
+		Step 8 : Then cpy the address(ssh)
+		Step 9 : Move to the destination folder where you want to clone it
+		Step 10: Right click,then open "Git Bash here " / open the folder with cmd
+		Step 11: Cmd "git clone 'paste_the_URL",then press ENTER
 
 ---------------------------------------------------------------
 GitHub -> Push (To save the local files to remote) -> Pull (To save the remote files to local)
@@ -191,5 +191,5 @@ note : Here you can see the main/master branch has different color with a * symb
 > git checkout branch_name ---> to switch branch
 > we can do 1 & 3 in a single cmd => git checkout -b branch_name 
 
-note: HEAD points the tip of the tree
+NOTE: HEAD points the tip of the tree
 --------------------------------------------------------------------------------------------------------
